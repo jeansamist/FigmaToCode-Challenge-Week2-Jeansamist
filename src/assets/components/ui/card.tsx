@@ -8,6 +8,7 @@ import { Button } from "./button";
 import { Ribbon } from "./ribbon";
 interface CardProps extends ComponentProps<"div"> {
   hoverable?: boolean;
+  motionDivClass?: string;
 }
 
 export const Card: FunctionComponent<CardProps> = ({ children, ...props }) => {
@@ -16,6 +17,7 @@ export const Card: FunctionComponent<CardProps> = ({ children, ...props }) => {
       variants={VARIANTS}
       initial={"hiddenScale"}
       whileInView={"visibleScale"}
+      className={props.motionDivClass}
       viewport={{ once: true }}
     >
       <div
@@ -35,6 +37,7 @@ export const CardProduct: FunctionComponent<
   ComponentProps<"div"> & {
     discount?: number | string;
     image: string;
+    motionDivClass?: string;
     ribbon?: false | "hot" | "sale";
     title: string;
     category: string;
@@ -42,10 +45,11 @@ export const CardProduct: FunctionComponent<
   }
 > = ({
   image,
+  motionDivClass,
   category,
   price,
   title,
-  ribbon = "hot",
+  ribbon = false,
   discount = false,
   ...props
 }) => {
@@ -55,6 +59,7 @@ export const CardProduct: FunctionComponent<
         "flex flex-col space-y-[18px] product-card",
         props.className
       )}
+      motionDivClass={motionDivClass}
     >
       <div className="relative overflow-hidden">
         <img src={image} alt={title} />
@@ -111,17 +116,26 @@ export const CardProduct: FunctionComponent<
 export const CardItemCategory: FunctionComponent<
   ComponentProps<"div"> & {
     image: string;
+    motionDivClass?: string;
     ribbon?: false | "hot" | "sale";
     category: string;
     products_number: number;
   }
-> = ({ image, category, products_number, ribbon = "hot", ...props }) => {
+> = ({
+  image,
+  motionDivClass,
+  category,
+  products_number,
+  ribbon = "hot",
+  ...props
+}) => {
   return (
     <Card
       className={cn(
         "flex flex-col space-y-[18px] product-card",
         props.className
       )}
+      motionDivClass={motionDivClass}
     >
       <div className="relative overflow-hidden">
         <img
@@ -146,14 +160,16 @@ export const CardItemCategory: FunctionComponent<
 export const CardInstagramPost: FunctionComponent<
   ComponentProps<"div"> & {
     image: string;
+    motionDivClass?: string;
   }
-> = ({ image, ...props }) => {
+> = ({ image, motionDivClass, ...props }) => {
   return (
     <Card
       className={cn(
         "flex flex-col space-y-[18px] product-card",
         props.className
       )}
+      motionDivClass={motionDivClass}
     >
       <div className="relative overflow-hidden">
         <img src={image} alt={""} className="aspect-square object-cover" />

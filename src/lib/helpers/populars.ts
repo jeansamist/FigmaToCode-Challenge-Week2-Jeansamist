@@ -13,11 +13,13 @@ export const POPULARS: {
     image: popular1,
     category: "Manto",
     products_number: 86,
+    ribbon: false,
   },
   {
     image: popular2,
     category: "Pants",
     products_number: 200,
+    ribbon: false,
   },
   {
     image: popular3,
@@ -29,10 +31,12 @@ export const POPULARS: {
     image: popular4,
     category: "Shirt",
     products_number: 320,
+    ribbon: false,
   },
   {
     image: popular5,
     category: "Jacket",
     products_number: 103,
+    ribbon: false,
   },
 ];
