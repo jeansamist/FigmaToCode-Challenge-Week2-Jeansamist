@@ -10,7 +10,7 @@ export const Follows: FunctionComponent = () => {
     <section className="py-[100px] bg-black/5 my-32">
       <div className="container flex flex-col gap-[70px]">
         <Title>Follow Products And Discounts On Instagram</Title>
-        <div className="flex gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
           {FOLLOWS.map((follow, key) => (
             <CardInstagramPost image={follow} key={key} />
           ))}

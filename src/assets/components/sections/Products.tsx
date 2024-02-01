@@ -10,7 +10,7 @@ export const Products: FunctionComponent = () => {
   return (
     <section className="container">
       <Title>Or subscribe to the newsletter</Title>
-      <div className="mt-4 mb-8 flex justify-between items-center">
+      <div className="mt-4 mb-8 flex justify-between items-center flex-col md:flex-row gap-4">
         <div className="flex gap-4">
           <ItemTab>All Products</ItemTab>
           <ItemTab variant={"disabled"}>T-Shirt</ItemTab>
@@ -21,7 +21,7 @@ export const Products: FunctionComponent = () => {
           <FaFilter /> <span>Filter</span>
         </Button>
       </div>
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {PRODUCTS.map((product, key) => (
           <CardProduct {...product} key={key} />
         ))}

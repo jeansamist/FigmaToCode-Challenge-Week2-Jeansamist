@@ -3,7 +3,7 @@ import { BRANDS } from "../../../lib/helpers/brands";
 
 export const Brands: FunctionComponent = () => {
   return (
-    <div className="container my-16 flex justify-between gap-4">
+    <div className="container my-16 flex items-center flex-wrap justify-center gap-y-8 md:justify-between gap-4">
       {BRANDS.map((brand, key) => (
         <img
           src={brand}

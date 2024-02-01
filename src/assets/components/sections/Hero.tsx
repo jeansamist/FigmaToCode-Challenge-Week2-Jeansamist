@@ -10,11 +10,11 @@ import { FaBagShopping } from "react-icons/fa6";
 export const Hero: FunctionComponent = () => {
   return (
     <div className="bg-black/5 pb-16 mb-4 pt-8 ">
-      <div className="container flex flex-col justify-between h-[113px]">
+      <div className="container flex flex-col justify-between h-[56px] md:h-[113px]">
         <div className="grid grid-cols-3 w-full items-center">
           <FiSearch size={20} />
           <img src={logo} alt="logo" className="w-[180px] mx-auto" />
-          <div className="space-x-4 flex justify-end">
+          <div className="space-x-4 sm:flex justify-end hidden">
             <Button variant={"simple"} className="text-dark">
               <FaUser size={20} /> <span>Account</span>
             </Button>
@@ -24,7 +24,7 @@ export const Hero: FunctionComponent = () => {
           </div>
         </div>
         <div className="h-px w-full bg-stroke"></div>
-        <div className="flex justify-between items-center">
+        <div className="lg:flex justify-between items-center hidden">
           <Button variant={"simple"} className="text-dark">
             Jewelry & Accessories
           </Button>
@@ -48,8 +48,8 @@ export const Hero: FunctionComponent = () => {
           </Button>
         </div>
       </div>
-      <div className="container flex gap-[102px] pt-32 items-center">
-        <div className="space-y-[50px]">
+      <div className="container flex gap-[102px] pt-32 items-center justify-between flex-col-reverse md:flex-row">
+        <div className="space-y-[50px] text-center md:text-left">
           <h1 className="text-body font-light">Collections</h1>
           <p className="text-[30px] leading-loose">
             You Can Explore Ans Shop Many Differnt Collection

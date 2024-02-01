@@ -1,17 +1,19 @@
 import { FunctionComponent } from "react";
 import logo from "./../../images/logo.svg";
+import payments from "./../../images/icons_payment.png";
+import { Button } from "../ui/button";
 
 export const Footer: FunctionComponent = () => {
   return (
     <footer>
-      <div className="container pb-16 flex justify-between items-start">
-        <div className="w-1/3 space-y-6">
-          <img src={logo} alt="logo" className="w-[180px]" />
+      <div className="container pb-16 flex justify-between items-start flex-col gap-y-16 md:flex-row sm:text-left text-center">
+        <div className="md:w-1/3 space-y-6">
+          <img src={logo} alt="logo" className="w-[180px] mx-auto sm:mx-0" />
           <p className="leading-loose text-black/75 opensans">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </p>
-          <div className="flex w-3/5 items-center justify-between">
+          <div className="flex w-3/5 items-center justify-between mx-auto sm:mx-0">
             <svg
               width="11"
               height="21"
@@ -62,7 +64,7 @@ export const Footer: FunctionComponent = () => {
             </svg>
           </div>
         </div>
-        <div className="w-3/5 flex justify-between opensans">
+        <div className="w-full md:w-3/5 flex justify-between opensans flex-col gap-y-6 sm:flex-row ">
           <div className="space-y-4">
             <h3 className="text-6xl">CATALOG</h3>
             <div className="text-[14px]">Necklaces</div>
@@ -87,6 +89,27 @@ export const Footer: FunctionComponent = () => {
             <div className="text-[14px]">Book an Appointment</div>
             <div className="text-[14px]">Shipping & Returns</div>
           </div>
+        </div>
+      </div>
+      <div className="p-3 bg-black text-black-foreground">
+        <div className="container flex justify-center md:justify-between flex-col gap-y-3 md:flex-row">
+          <div className="md:text-left text-center">© 2022 Coral , Inc.</div>
+          <img src={payments} alt="payments" className="" />
+          <Button variant={"simple"}>
+            <span>Scroll to top</span>
+            <svg
+              width="12"
+              height="13"
+              viewBox="0 0 12 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.9766 6.50391C10.8125 6.66797 10.5938 6.75 10.375 6.75C10.1289 6.75 9.91016 6.66797 9.74609 6.50391L6.875 3.63281V12C6.875 12.4922 6.46484 12.875 6 12.875C5.5625 12.875 5.125 12.4922 5.125 12V3.63281L2.22656 6.50391C1.89844 6.85938 1.32422 6.85938 0.996094 6.50391C0.640625 6.17578 0.640625 5.60156 0.996094 5.27344L5.37109 0.898438C5.69922 0.542969 6.27344 0.542969 6.60156 0.898438L10.9766 5.27344C11.332 5.60156 11.332 6.17578 10.9766 6.50391Z"
+                fill="white"
+              />
+            </svg>
+          </Button>
         </div>
       </div>
     </footer>
