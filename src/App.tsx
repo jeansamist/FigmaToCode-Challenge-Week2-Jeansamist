@@ -5,6 +5,8 @@ import { Popular } from "./assets/components/sections/Popular";
 import { Products } from "./assets/components/sections/Products";
 import { Zara } from "./assets/components/sections/Zara";
 import { BestSellers } from "./assets/components/sections/BestSellers";
+import { Follows } from "./assets/components/sections/Follows";
+import { Footer } from "./assets/components/sections/Footer";
 const App: FunctionComponent = () => {
   return (
     <main>
@@ -14,6 +16,8 @@ const App: FunctionComponent = () => {
       <Products />
       <Zara />
       <BestSellers />
+      <Follows />
+      <Footer />
     </main>
   );
 };
